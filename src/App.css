@@ -92,7 +92,7 @@
   background: linear-gradient(rgba(255, 255, 255, 0), #2c2c2c);
 }
 
-.background .body .mainBox .post .postFooter .upvote {
+.background .body .mainBox .post .postFooter .upvoteBtn {
   font-size: 30px;
 }
 
@@ -127,6 +127,41 @@
   border-radius: 5px;
 }
 
+.background .modal {
+  height: 40vh;
+  width: 60%;
+  left: 20%;
+  top: 30%;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  z-index: 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.background .modal span {
+  margin-left: 20px;
+  padding: 10px 20px;
+  background-color: #4d4d4d;
+}
+
+.background .modal span img {
+  margin-left: 5px;
+  height: 15px;
+}
+
+.background .modal span:hover {
+  background-color: #4b3950;
+  cursor: pointer;
+}
+
 ::-webkit-scrollbar {
   background: #2c2c2c;
 }
@@ -137,5 +172,10 @@
 
 ::-webkit-scrollbar-thumb:hover {
   background: #4b3950;
+}
+
+.shareOverlay {
+  z-index: 3;
+  height: 10vh;
 }
 /*# sourceMappingURL=App.css.map */

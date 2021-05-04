@@ -6,7 +6,6 @@ $accentColor: rgb(75, 57, 80);
     margin: 0;
     padding: 0;
     color: white;
-    
 }
 
 .background {
@@ -69,7 +68,7 @@ $accentColor: rgb(75, 57, 80);
                     justify-content: space-between;
                     padding: 5px;
                     background: linear-gradient(rgba(255, 255, 255, 0), $mainColor);
-                    .upvote {
+                    .upvoteBtn {
                         font-size: 30px;
                     }
                     .comment, .share {
@@ -99,6 +98,32 @@ $accentColor: rgb(75, 57, 80);
             }
         }
     }
+    .modal {
+        height: 40vh;
+        width: 60%;
+        left: 20%;
+        top: 30%;
+        background-color: rgba(0, 0, 0, .8);
+        position: absolute;
+        z-index: 3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        span {
+            margin-left: 20px;
+            padding: 10px 20px;
+            background-color: $containerColor;
+            img {
+                margin-left: 5px;
+                height: 15px;
+            }
+        }
+        span:hover {
+            background-color: $accentColor;
+            cursor: pointer;
+        }
+        
+    }
 }
 
 ::-webkit-scrollbar{
@@ -111,4 +136,9 @@ $accentColor: rgb(75, 57, 80);
 
 ::-webkit-scrollbar-thumb:hover {
     background: $accentColor;
+}
+
+.shareOverlay {
+    z-index: 3;
+    height: 10vh;
 }
