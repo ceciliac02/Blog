@@ -1,0 +1,114 @@
+$containerColor: rgb(77, 77, 77);
+$mainColor: rgb(44, 44, 44);
+$accentColor: rgb(75, 57, 80);
+
+* {
+    margin: 0;
+    padding: 0;
+    color: white;
+    
+}
+
+.background {
+    background-color: $mainColor;
+    height: 100vh;
+    .header {
+        background-color: $containerColor;
+        font-size: 35px;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .webName {
+            margin: 0 20px;
+        }
+        .nav {
+            li {
+                font-size: 30px;
+                display: inline-block;
+                border: 2px solid $containerColor;
+                padding: 10px 70px;
+                background-color: $mainColor;
+            }
+            li:hover {
+                background-color: $accentColor;
+                cursor: pointer;
+            }
+        }
+    }
+    .body {
+        height: 80vh;
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+        .mainBox {
+            width: 50%;
+            background-color: $containerColor;
+            border-radius: 5px;
+            position: relative;
+            overflow-y: scroll;
+            .post {
+                width: 90%;
+                margin: 30px 35px;
+                border: 2px solid $mainColor;
+                border-radius: 5px;
+                box-sizing: content-box;
+                 
+                .postHeader {
+                    background-color: $mainColor;
+                    padding: 5px;
+                }
+                .postBody {
+                    padding: 5px;
+                    height: 300px;
+                    overflow-y: auto;
+                }
+                .postFooter {
+
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 5px;
+                    background: linear-gradient(rgba(255, 255, 255, 0), $mainColor);
+                    .upvote {
+                        font-size: 30px;
+                    }
+                    .comment, .share {
+                        margin-top: 15px;
+                        
+                    }
+                }
+            }
+        }
+        .auxBoxes {
+            display: flex;
+            flex-direction: column;
+            .sideBox {
+                width: 400px;
+                height: 40%;
+                margin-left: 30px;
+                background-color: $containerColor;
+                border-radius: 5px;
+            }
+            .ad {
+                width: 400px;
+                height: 450px;
+                margin-left: 30px;
+                margin-top: 30px;
+                background-color: $containerColor;
+                border-radius: 5px;
+            }
+        }
+    }
+}
+
+::-webkit-scrollbar{
+    background: $mainColor;
+}
+
+::-webkit-scrollbar-thumb {
+    background: $containerColor;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: $accentColor;
+}
