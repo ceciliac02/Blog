@@ -1,6 +1,7 @@
 import React from 'react';
 import Nav from './Menu.js'
 import Posts from './Posts.js';
+import Form from './Email.js';
 
 function Layout () {
     return (
@@ -15,7 +16,9 @@ function Layout () {
                     <Posts />
                 </div>
                 <div className="auxBoxes">
-                    <div className="sideBox"></div>
+                    <div className="sideBox">
+                        <Form />
+                    </div>
                     <div className="ad"></div>
                 </div>
             </div>

@@ -82,15 +82,38 @@ $accentColor: rgb(75, 57, 80);
         .auxBoxes {
             display: flex;
             flex-direction: column;
+            width: 280px;
             .sideBox {
-                width: 400px;
-                height: 40%;
+                height: 200px;
                 margin-left: 30px;
                 background-color: $containerColor;
                 border-radius: 5px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                .emailForm {
+                    width: 350px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    #email, #lname, #fname {
+                        margin: 5px 0px;
+                        font-size: 15px;
+                        background-color: $mainColor;
+                    }
+                    #formBtn {
+                        background-color: $mainColor;
+                        padding: 5px;
+                        &:hover {
+                            background-color: $accentColor;
+                            cursor: pointer;
+                        }
+                    }
+                }
             }
             .ad {
-                width: 400px;
                 height: 450px;
                 margin-left: 30px;
                 margin-top: 30px;
@@ -153,10 +176,6 @@ $accentColor: rgb(75, 57, 80);
 }
 
 ::-webkit-scrollbar-thumb {
-    background: $containerColor;
-}
-
-::-webkit-scrollbar-thumb:hover {
     background: $accentColor;
 }
 
