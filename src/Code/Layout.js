@@ -19,7 +19,11 @@ function Layout () {
                     <div className="sideBox">
                         <Form />
                     </div>
-                    <div className="ad"></div>
+                    <div className="ad">
+                        <div id="ad">
+                            Ad.
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

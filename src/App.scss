@@ -119,6 +119,14 @@ $accentColor: rgb(75, 57, 80);
                 margin-top: 30px;
                 background-color: $containerColor;
                 border-radius: 5px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                #ad {
+                    width: 80%;
+                    height: 90%;
+                    background-color: $mainColor;
+                }
             }
         }
     }
