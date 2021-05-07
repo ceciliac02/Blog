@@ -33,7 +33,7 @@ class Share extends React.Component {
                     <div className="modalBody">
                         <span className="socialLink">Copy Url <img src={link} alt=""/></span>
                         <span className="socialLink">Twitter <img src={twitter} alt=""/></span>
-                        <span className="socialLink">Facebook <img src={fb}/></span>
+                        <span className="socialLink">Facebook <img src={fb} alt=""/></span>
                         <span className="socialLink">Instagram <img src={insta} alt=""/></span>
                     </div>
                 </div>
