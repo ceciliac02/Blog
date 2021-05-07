@@ -9,7 +9,7 @@ class Share extends React.Component {
         const modal = document.querySelectorAll(".modal");
         console.log(modal);
         for (let i = 0; i < modal.length; i++) {
-            setTimeout(() => {modal[i].classList.toggle("active")}, 500);
+            setTimeout(() => {modal[i].classList.add("active")}, 500);
         }
     }
     closeModal = () => {

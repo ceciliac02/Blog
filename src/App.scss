@@ -110,7 +110,8 @@ $accentColor: rgb(75, 57, 80);
         display: flex;
         flex-direction: column;
         border-radius: 5px;
-        display: none;
+        opacity: 0%;
+        transition: all 0.5s;
         .modalHeader {
             width: 45vw;
             margin-left: 97%;
@@ -140,7 +141,7 @@ $accentColor: rgb(75, 57, 80);
             }
         }
         &.active {
-            display: flex;
+            opacity: 100%;
         }
     }
 }

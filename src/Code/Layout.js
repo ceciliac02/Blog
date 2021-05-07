@@ -5,7 +5,6 @@ import Posts from './Posts.js';
 function Layout () {
     const closeModal = () => {
         const modal = document.querySelectorAll(".modal");
-        console.log(modal);
           if (modal.length > 0) {
               for (let i = 0; i < modal.length; i++) {
                 modal[i].classList.remove("active");
