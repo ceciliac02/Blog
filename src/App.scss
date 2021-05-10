@@ -7,10 +7,11 @@ $accentColor: rgb(75, 57, 80);
     padding: 0;
     color: white;
 }
-
-.background {
-    background-color: $mainColor;
+body {
     height: 100vh;
+    background-color: $mainColor;
+}
+.background {
     .header {
         background-color: $containerColor;
         font-size: 35px;
@@ -188,4 +189,91 @@ $accentColor: rgb(75, 57, 80);
 .shareOverlay {
     z-index: 3;
     height: 10vh;
+}
+
+@media screen and (max-width: 1025px) {
+    .background {
+        .header {
+            font-size: 30px;
+            .nav {
+                li {
+                    font-size: 25px;
+                    padding: 10px 45px;
+                }
+            }
+        }
+        .body {
+            .mainBox {
+                width: 60%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 769px) {
+    .background {
+        .header {
+            .webName {
+                font-size: 30px;
+            }
+            .nav {
+                li {
+                    font-size: 20px;
+                    padding: 10px 30px;
+                }
+            }
+        }
+        .body {
+            flex-wrap: wrap;
+            .mainBox {
+                width: 80%;
+            }
+            .auxBoxes {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                width: 550px;
+                .sideBox {
+                    margin-left: 0;
+                    margin-top: 30px;
+                    width: 400px;
+                }
+                .ad {
+                    width: 800px;
+                    height: 150px;
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .background {
+        .header {
+            height: 10vh;
+            .nav {
+                visibility: hidden;
+                position: absolute;
+                z-index: 2;
+                height: 80vh;
+                top: 0;
+                ul {
+                    display: flex;
+                    flex-direction: column;
+                    li {
+                        font-size: 25px;
+                        width: 80vw;
+                        padding: 10px 30px;
+                    }
+                }
+            }
+        }
+        .body {
+            flex-wrap: wrap;
+            .mainBox {
+                width: 95%;
+            }
+        }
+    }
 }
