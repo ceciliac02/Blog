@@ -13,7 +13,7 @@ function Layout () {
             <div className="body">
                 <div className="mainBox">
                     <Posts />
-                    <Posts />
+                    
                 </div>
                 <div className="auxBoxes">
                     <div className="sideBox">
