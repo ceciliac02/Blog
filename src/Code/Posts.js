@@ -18,15 +18,15 @@ class Post extends React.Component {
             <>
                 <div className="post">
                     <div className="postHeader">{this.header="First Post"}</div>
-                    <div className="postBody">{this.state.body=this.firstPostBody}</div>
+                    <div className="postBody">{this.body=this.firstPostBody}</div>
                     <div className="postFooter">
                     <Upvote />
                     <Share />
                     </div>
                 </div>
                 <div className="post">
-                    <div className="postHeader">{this.state.header="Second Post"}</div>
-                    <div className="postBody">{this.state.body=this.secondPostBody}</div>
+                    <div className="postHeader">{this.header="Second Post"}</div>
+                    <div className="postBody">{this.body=this.secondPostBody}</div>
                     <div className="postFooter">
                     <Upvote />
                     <Share />

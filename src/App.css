@@ -215,25 +215,27 @@ body {
           flex-direction: column;
   border-radius: 5px;
   visibility: hidden;
+  opacity: 0%;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
 
 .background .modal .modalHeader {
   width: 45vw;
-  margin-left: 97%;
+  margin-left: 95%;
   margin-top: 3px;
 }
 
 .background .modal .modalHeader #modalClose {
   cursor: pointer;
+  font-size: 30px;
 }
 
 .background .modal .modalBody {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 87%;
+  height: 75%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -259,8 +261,26 @@ body {
   cursor: pointer;
 }
 
+.background .modal .modalBody .copiedUrl {
+  position: absolute;
+  z-index: 4;
+  background-color: #4b3950;
+  padding: 10px 20px;
+  border-radius: 5px;
+  visibility: hidden;
+  opacity: 0%;
+  -webkit-transition: all 2s;
+  transition: all 2s;
+}
+
+.background .modal .modalBody .copiedUrl.active {
+  visibility: visible;
+  opacity: 100%;
+}
+
 .background .modal.active {
   visibility: visible;
+  opacity: 100%;
 }
 
 ::-webkit-scrollbar {

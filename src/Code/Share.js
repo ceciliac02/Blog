@@ -7,15 +7,21 @@ import Instagram from '../icons/instagram.png';
 class Share extends React.Component {
     showModal = () => {
         const modal = document.querySelectorAll(".modal");
-        console.log(modal);
         for (let i = 0; i < modal.length; i++) {
-            setTimeout(() => {modal[i].classList.add("active")}, 500);
+            modal[i].classList.add("active")
         }
     }
     closeModal = () => {
         const modal = document.querySelectorAll(".modal");
         for (let i = 0; i < modal.length; i++) {
             modal[i].classList.remove("active")
+        }
+    }
+    showUrl = () => {
+        const urlCopy = document.querySelectorAll(".copiedUrl");
+        for (let i = 0; i < urlCopy.length; i++) {
+            urlCopy[i].classList.add("active");
+            setTimeout(() => {urlCopy[i].classList.remove("active")}, 3000)
         }
     }
     render () {
@@ -28,10 +34,11 @@ class Share extends React.Component {
                 <div className="shareBtn" onClick={this.showModal}>Share</div>
                 <div className="modal">
                     <div className="modalHeader">
-                        <span id="modalClose" onClick={this.closeModal}>x</span>
+                        <span id="modalClose" onClick={this.closeModal}>&times;</span>
                     </div>
                     <div className="modalBody">
-                        <span className="socialLink">Copy Url <img src={link} alt=""/></span>
+                        <span className="socialLink" onClick={this.showUrl}>Copy Url <img src={link} alt=""/></span>
+                        <span className="copiedUrl">Copied Url</span>
                         <span className="socialLink">Twitter <img src={twitter} alt=""/></span>
                         <span className="socialLink">Facebook <img src={fb} alt=""/></span>
                         <span className="socialLink">Instagram <img src={insta} alt=""/></span>
