@@ -198,44 +198,52 @@ body {
   background-color: #2c2c2c;
 }
 
-.background .modal {
-  height: 40vh;
-  width: 45vw;
-  left: 30%;
-  top: 25%;
-  background-color: rgba(0, 0, 0, 0.5);
+.background .body .modalOverlay {
+  background-color: rgba(0, 0, 0, 0.4);
+  height: 100vh;
+  width: 100vw;
   position: fixed;
-  z-index: 3;
+  top: 0;
+  left: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  border-radius: 5px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   visibility: hidden;
   opacity: 0%;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
 
-.background .modal .modalHeader {
-  width: 45vw;
-  margin-left: 95%;
-  margin-top: 3px;
+.background .body .modalOverlay .modal {
+  background-color: #4d4d4d;
+  height: 250px;
+  width: 600px;
+  border-radius: 5px;
 }
 
-.background .modal .modalHeader #modalClose {
-  cursor: pointer;
+.background .body .modalOverlay .modal .modalHeader {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
   font-size: 30px;
+  padding: 5px 15px;
 }
 
-.background .modal .modalBody {
+.background .body .modalOverlay .modal .modalHeader #modalClose {
+  margin-left: 50%;
+  cursor: pointer;
+}
+
+.background .body .modalOverlay .modal .modalBody {
+  height: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 75%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -244,41 +252,11 @@ body {
           align-items: center;
 }
 
-.background .modal .modalBody .socialLink {
-  margin: 20px;
-  padding: 10px 20px;
-  background-color: #4d4d4d;
-  border-radius: 5px;
+.background .body .modalOverlay .modal .modalBody .socialLink {
+  margin: 0px 10px;
 }
 
-.background .modal .modalBody .socialLink img {
-  margin-left: 5px;
-  height: 20px;
-}
-
-.background .modal .modalBody .socialLink:hover {
-  background-color: #4b3950;
-  cursor: pointer;
-}
-
-.background .modal .modalBody .copiedUrl {
-  position: absolute;
-  z-index: 4;
-  background-color: #4b3950;
-  padding: 10px 20px;
-  border-radius: 5px;
-  visibility: hidden;
-  opacity: 0%;
-  -webkit-transition: all 2s;
-  transition: all 2s;
-}
-
-.background .modal .modalBody .copiedUrl.active {
-  visibility: visible;
-  opacity: 100%;
-}
-
-.background .modal.active {
+.background .body .modalOverlay.active {
   visibility: visible;
   opacity: 100%;
 }

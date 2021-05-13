@@ -3,16 +3,18 @@ import Link from '../icons/copylink.png';
 import Twitter from '../icons/twitter.png';
 import Facebook from '../icons/facebook.png';
 import Instagram from '../icons/instagram.png';
+import { EmailShareButton, FacebookShareButton, RedditShareButton, TumblrShareButton, TwitterShareButton, WhatsappShareButton } from 'react-share';
+import { EmailIcon, FacebookIcon, RedditIcon, TumblrIcon, TwitterIcon, WhatsappIcon } from 'react-share';
 
 class Share extends React.Component {
     showModal = () => {
-        const modal = document.querySelectorAll(".modal");
+        const modal = document.querySelectorAll(".modalOverlay");
         for (let i = 0; i < modal.length; i++) {
             modal[i].classList.add("active")
         }
     }
     closeModal = () => {
-        const modal = document.querySelectorAll(".modal");
+        const modal = document.querySelectorAll(".modalOverlay");
         for (let i = 0; i < modal.length; i++) {
             modal[i].classList.remove("active")
         }
@@ -24,26 +26,40 @@ class Share extends React.Component {
             setTimeout(() => {urlCopy[i].classList.remove("active")}, 3000)
         }
     }
+    webUrl = window.location.href;
+
     render () {
-        const link = Link;
-        const fb = Facebook;
-        const twitter = Twitter;
-        const insta = Instagram;
         return (
             <div className="share">
                 <div className="shareBtn" onClick={this.showModal}>Share</div>
-                <div className="modal">
-                    <div className="modalHeader">
-                        <span id="modalClose" onClick={this.closeModal}>&times;</span>
+                <div className="modalOverlay" onClick={this.closeModal}>
+                    <div className="modal" onClick={e => e.stopPropagation()}>
+                        <div className="modalHeader">
+                            Thanks for sharing!
+                            <span id="modalClose" onClick={this.closeModal}>&times;</span>
+                        </div>
+                        <div className="modalBody">
+                            <EmailShareButton className="socialLink">
+                                <EmailIcon borderRadius={5}></EmailIcon>
+                            </EmailShareButton>
+                            <FacebookShareButton className="socialLink" url={this.webUrl}>
+                                <FacebookIcon borderRadius={5}></FacebookIcon>
+                            </FacebookShareButton >
+                            <RedditShareButton className="socialLink" url={this.webUrl}>
+                                <RedditIcon borderRadius={5}></RedditIcon>
+                            </RedditShareButton >
+                            <TumblrShareButton className="socialLink" url={this.webUrl}>
+                                <TumblrIcon borderRadius={5}></TumblrIcon>
+                            </TumblrShareButton>
+                            <TwitterShareButton className="socialLink" url={this.webUrl}>
+                                <TwitterIcon borderRadius={5}></TwitterIcon>
+                            </TwitterShareButton>
+                            <WhatsappShareButton className="socialLink" url={this.webUrl}>
+                                <WhatsappIcon borderRadius={5}></WhatsappIcon>
+                            </WhatsappShareButton>
+                        </div>
                     </div>
-                    <div className="modalBody">
-                        <span className="socialLink" onClick={this.showUrl}>Copy Url <img src={link} alt=""/></span>
-                        <span className="copiedUrl">Copied Url</span>
-                        <span className="socialLink">Twitter <img src={twitter} alt=""/></span>
-                        <span className="socialLink">Facebook <img src={fb} alt=""/></span>
-                        <span className="socialLink">Instagram <img src={insta} alt=""/></span>
-                    </div>
-                </div>
+                </div>  
             </div>
         )
     }
