@@ -3,6 +3,7 @@ import Posts from './Posts.js';
 import Form from './Email.js';
 import About from './About.js';
 import SignIn from './SignIn.js';
+import Help from './Help.js';
 
 class Layout extends React.Component {
     constructor (props) {
@@ -26,6 +27,11 @@ class Layout extends React.Component {
             content: <SignIn />
         })
     }
+    help = () => {
+        this.setState({
+            content: <Help />
+        })
+    }
     render () {
         return (
             <div className="outerContainer">
@@ -36,7 +42,7 @@ class Layout extends React.Component {
                             <li onClick={this.home}>Home</li>
                             <li onClick={this.about}>About</li>
                             <li onClick={this.signIn}>Sign In</li>
-                            <li>Help</li>
+                            <li onClick={this.help}>Help</li>
                         </ul>
                     </div>
                     </div>
