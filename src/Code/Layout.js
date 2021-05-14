@@ -4,12 +4,14 @@ import Form from './Email.js';
 import About from './About.js';
 import SignIn from './SignIn.js';
 import Help from './Help.js';
+import Hamburger from 'react-hamburger-menu';
 
 class Layout extends React.Component {
     constructor (props) {
         super(props);
         this.state = {
-            content: <Posts />
+            content: <Posts />,
+            open: false
         }      
     }
     home = () => {
@@ -32,12 +34,29 @@ class Layout extends React.Component {
             content: <Help />
         })
     }
+    handleClick = () => {
+        this.setState({
+            open: !this.state.open
+        })
+    }
+    toggleNav = () => {
+        
+        console.log(this.state.open)
+    }
     render () {
         return (
             <div className="outerContainer">
                 <div className="header">
-                    <div className="webName" onClick={this.about}>MyWebsite</div>
-                    <div className="nav">
+                    <div className="webName" onClick={this.home}>MyWebsite</div>
+                    <Hamburger className="hamMenu" 
+                    color="white"
+                    width={30}
+                    height={20}
+                    isOpen={this.state.open}
+                    menuClicked={this.handleClick.bind(this)}
+                    />
+                    <div className="nav" style={this.state.open ? {visibility:"visible", opacity:"100%"} : {visibility:"hidden", opacity:"0%"}}
+                    onClick={() => {this.state.open=false}}>
                         <ul>
                             <li onClick={this.home}>Home</li>
                             <li onClick={this.about}>About</li>
