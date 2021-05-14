@@ -1,8 +1,4 @@
 import React from 'react';
-import Link from '../icons/copylink.png';
-import Twitter from '../icons/twitter.png';
-import Facebook from '../icons/facebook.png';
-import Instagram from '../icons/instagram.png';
 import { EmailShareButton, FacebookShareButton, RedditShareButton, TumblrShareButton, TwitterShareButton, WhatsappShareButton } from 'react-share';
 import { EmailIcon, FacebookIcon, RedditIcon, TumblrIcon, TwitterIcon, WhatsappIcon } from 'react-share';
 
