@@ -225,6 +225,7 @@ a:hover {
             position: fixed;
             top: 0;
             left: 0;
+            z-index: 4;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -236,6 +237,7 @@ a:hover {
                 height: 250px;
                 width: 600px;
                 border-radius: 5px;
+                z-index: 5;
                 .modalHeader {
                     width: 100%;
                     background-color: rgba(0, 0, 0, 0.4);
