@@ -333,9 +333,6 @@ a:hover {
       -ms-flex-align: center;
           align-items: center;
   visibility: hidden;
-  opacity: 0%;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
 }
 
 .background .body .modalOverlay .modal {
@@ -377,7 +374,6 @@ a:hover {
 
 .background .body .modalOverlay.active {
   visibility: visible;
-  opacity: 100%;
 }
 
 .background .footer {

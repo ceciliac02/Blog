@@ -230,8 +230,6 @@ a:hover {
             justify-content: center;
             align-items: center;
             visibility: hidden;
-            opacity: 0%;
-            transition: all 0.5s;
             .modal {
                 background-color: $containerColor;
                 height: 250px;
@@ -261,7 +259,6 @@ a:hover {
             }
             &.active {
                 visibility: visible;
-                opacity: 100%;
             }
         }
     }
