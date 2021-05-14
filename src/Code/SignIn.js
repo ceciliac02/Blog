@@ -30,7 +30,7 @@ class SignIn extends React.Component {
                         <label htmlFor="password">Password:</label>
                         <input id="password" className="signInInput" type="password" />
                         <div className="signInButton">Sign In</div>
-                        <a href="#">Have trouble logging in?</a>
+                        <p>Have trouble logging in?</p>
                     </form>
                 </div>
             </>

@@ -55,8 +55,7 @@ class Layout extends React.Component {
                     isOpen={this.state.open}
                     menuClicked={this.handleClick.bind(this)}
                     />
-                    <div className="nav" style={this.state.open ? {visibility:"visible", opacity:"100%"} : {visibility:"hidden", opacity:"0%"}}
-                    onClick={() => {this.state.open=false}}>
+                    <div className="nav">
                         <ul>
                             <li onClick={this.home}>Home</li>
                             <li onClick={this.about}>About</li>
