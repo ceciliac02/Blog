@@ -10,6 +10,7 @@ $accentColor: rgb(75, 57, 80);
 body {
     height: 100vh;
     background-color: $mainColor;
+    font-family: Arial, Helvetica, sans-serif;
 }
 .background {
     .header {
@@ -71,6 +72,40 @@ body {
                 background-color: $mainColor;
                 padding: 30px;
                 border-radius: 5px;
+                .signInForm{
+                    height: 200px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    label, .signInButton {
+                        text-indent: 0;
+                        font-size: 20px;
+                    }
+                    a {
+                        text-indent: 0;
+                        margin-top: 10px;
+                        &:hover {
+                            color: rgb(136, 101, 141);
+                        }
+                    }
+                    .signInInput {
+                        width: 200px;
+                        background-color: $containerColor;
+                        border-radius: 5px;
+                        text-align: center;
+                    }
+                    .signInButton {
+                        margin-top: 10px;
+                        background-color: $containerColor;
+                        padding: 10px;
+                        border-radius: 5px;
+                        &:hover {
+                            cursor: pointer;
+                            background-color: $accentColor;
+                        }
+                    }
+                }
             }
             .post {
                 width: 90%;
@@ -206,6 +241,14 @@ body {
                 opacity: 100%;
             }
         }
+    }
+    .footer {
+        height: 55px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient($mainColor, rgba(0, 0, 0, 0.3));
+        font-size: 13px;
     }
 }
 

@@ -2,6 +2,7 @@ import React from 'react';
 import Posts from './Posts.js';
 import Form from './Email.js';
 import About from './About.js';
+import SignIn from './SignIn.js';
 
 class Layout extends React.Component {
     constructor (props) {
@@ -22,7 +23,7 @@ class Layout extends React.Component {
     }
     signIn = () => {
         this.setState({
-
+            content: <SignIn />
         })
     }
     render () {
@@ -34,8 +35,7 @@ class Layout extends React.Component {
                         <ul>
                             <li onClick={this.home}>Home</li>
                             <li onClick={this.about}>About</li>
-                            <li>Sign In</li>
-                            <li>More</li>
+                            <li onClick={this.signIn}>Sign In</li>
                             <li>Help</li>
                         </ul>
                     </div>
@@ -43,7 +43,6 @@ class Layout extends React.Component {
                 <div className="body">
                     <div className="mainBox">
                         {this.state.content}
-                        
                     </div>
                     <div className="auxBoxes">
                         <div className="sideBox">
@@ -56,6 +55,7 @@ class Layout extends React.Component {
                         </div>
                     </div>
                 </div>
+                <div className="footer">This is the footer. This is where the copyright would go</div>
             </div>
         )
     }
