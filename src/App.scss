@@ -237,13 +237,12 @@ a:hover {
                 border-radius: 5px;
                 z-index: 5;
                 .modalHeader {
-                    width: 100%;
+                    width: 95%;
                     background-color: rgba(0, 0, 0, 0.4);
                     font-size: 30px;
                     padding: 5px 15px;
                     #modalClose {
                         margin-left: 50%;
-                        
                         cursor: pointer;
                     }
                 }
@@ -312,15 +311,16 @@ a:hover {
             }
             .nav {
                 li {
-                    font-size: 20px;
                     padding: 10px 30px;
                 }
             }
         }
         .body {
             flex-wrap: wrap;
+            height: 100%;
             .mainBox {
                 width: 80%;
+                height: 80vh;
             }
             .auxBoxes {
                 flex-direction: row;
@@ -340,13 +340,12 @@ a:hover {
             }
         }
         .footer {
-            position: fixed;
-            bottom: 0;
+            top: -100%;
         }
     }
 }
 
-@media screen and (max-width: 638px) {
+@media screen and (max-width: 685px) {
     .background {
         .header {
             .hamMenu {
@@ -373,17 +372,111 @@ a:hover {
                         padding: 10px 30px;
                     }
                 }
+                &.active {
+                    visibility: visible;
+                    opacity: 100%;
+                }
+            }
+        }
+        .body {
+            .modalOverlay {
+                .modal {
+                    width: 85%;
+                    .modalHeader {
+                        font-size: 25px;
+                        width: 100%;
+                        padding-right: 0;
+                        box-sizing: border-box;
+                        display: flex;
+                        justify-content: space-between;
+                        #modalClose {
+                            margin: 0;
+                            margin-right: 5px;
+                        }
+                    }
+                    .modalBody {
+                        display: flex;
+                        flex-wrap: wrap;
+                        .socialLink {
+                            margin: 0px 5px;
+                        }
+                    }
+                }
             }
         }
     }
 }
 
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 541px) {
     .background {
+        width: 100vw;
         .body {
-            flex-wrap: wrap;
+            width: 100%;
             .mainBox {
-                width: 95%;
+                width: 90%;
+            }
+            .auxBoxes {
+                width: 90%;
+                .sideBox {
+                    width: 100%;
+                }
+                .ad {
+                    width: 100%;
+                }
+            }
+            .modalOverlay {
+                .modal {
+                    .modalHeader {
+                        font-size: 20px;
+                    }
+                    .modalBody {
+                        .socialLink {
+                            margin: 0px 3px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 352px) {
+    .background {
+        .header {
+            .nav {
+                width: 100%;
+                ul {
+                    width: 100%;
+                    li {
+                        padding: 10px 0px;
+                        width: 100%;
+                        border: 0;
+                        border-bottom: 1px $containerColor solid;
+                    }
+                }
+            }
+        }
+        .body {
+            .mainBox {
+                .pageHeader {
+                    width: 90%;
+                }
+                .pageBody {
+                    .signInForm {
+                        width: 90%;
+                    }
+                }
+            }
+            .auxBoxes {
+                .sideBox {
+                    .form {
+                        width: 100%;
+                        .emailForm {
+                            width: 100%;
+                            
+                        }
+                    }
+                }
             }
         }
     }

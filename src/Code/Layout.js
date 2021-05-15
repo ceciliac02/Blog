@@ -37,11 +37,19 @@ class Layout extends React.Component {
     handleClick = () => {
         this.setState({
             open: !this.state.open
-        })
-    }
-    toggleNav = () => {
-        
-        console.log(this.state.open)
+        });
+        const nav = document.querySelectorAll(".nav");
+        if (this.state.open === false) {
+            for (let i = 0; i < nav.length; i++) {
+                nav[i].classList.add("active");
+            }
+        }
+        else {
+            for (let i = 0; i < nav.length; i++) {
+                nav[i].classList.remove("active");
+            }
+        }
+        console.log("did it");
     }
     render () {
         return (
@@ -55,7 +63,7 @@ class Layout extends React.Component {
                     isOpen={this.state.open}
                     menuClicked={this.handleClick.bind(this)}
                     />
-                    <div className="nav">
+                    <div className="nav" >
                         <ul>
                             <li onClick={this.home}>Home</li>
                             <li onClick={this.about}>About</li>

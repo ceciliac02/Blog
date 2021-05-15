@@ -344,7 +344,7 @@ a:hover {
 }
 
 .background .body .modalOverlay .modal .modalHeader {
-  width: 100%;
+  width: 95%;
   background-color: rgba(0, 0, 0, 0.4);
   font-size: 30px;
   padding: 5px 15px;
@@ -423,15 +423,16 @@ a:hover {
     font-size: 30px;
   }
   .background .header .nav li {
-    font-size: 20px;
     padding: 10px 30px;
   }
   .background .body {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    height: 100%;
   }
   .background .body .mainBox {
     width: 80%;
+    height: 80vh;
   }
   .background .body .auxBoxes {
     -webkit-box-orient: horizontal;
@@ -456,12 +457,11 @@ a:hover {
     margin-left: 0;
   }
   .background .footer {
-    position: fixed;
-    bottom: 0;
+    top: -100%;
   }
 }
 
-@media screen and (max-width: 638px) {
+@media screen and (max-width: 685px) {
   .background .header .hamMenu {
     display: block;
     margin-right: 2%;
@@ -493,15 +493,93 @@ a:hover {
     font-size: 30px;
     padding: 10px 30px;
   }
-}
-
-@media screen and (max-width: 380px) {
-  .background .body {
+  .background .header .nav.active {
+    visibility: visible;
+    opacity: 100%;
+  }
+  .background .body .modalOverlay .modal {
+    width: 85%;
+  }
+  .background .body .modalOverlay .modal .modalHeader {
+    font-size: 25px;
+    width: 100%;
+    padding-right: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .background .body .modalOverlay .modal .modalHeader #modalClose {
+    margin: 0;
+    margin-right: 5px;
+  }
+  .background .body .modalOverlay .modal .modalBody {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
+  .background .body .modalOverlay .modal .modalBody .socialLink {
+    margin: 0px 5px;
+  }
+}
+
+@media screen and (max-width: 541px) {
+  .background {
+    width: 100vw;
+  }
+  .background .body {
+    width: 100%;
+  }
   .background .body .mainBox {
-    width: 95%;
+    width: 90%;
+  }
+  .background .body .auxBoxes {
+    width: 90%;
+  }
+  .background .body .auxBoxes .sideBox {
+    width: 100%;
+  }
+  .background .body .auxBoxes .ad {
+    width: 100%;
+  }
+  .background .body .modalOverlay .modal .modalHeader {
+    font-size: 20px;
+  }
+  .background .body .modalOverlay .modal .modalBody .socialLink {
+    margin: 0px 3px;
+  }
+}
+
+@media screen and (max-width: 352px) {
+  .background .header .nav {
+    width: 100%;
+  }
+  .background .header .nav ul {
+    width: 100%;
+  }
+  .background .header .nav ul li {
+    padding: 10px 0px;
+    width: 100%;
+    border: 0;
+    border-bottom: 1px #4d4d4d solid;
+  }
+  .background .body .mainBox .pageHeader {
+    width: 90%;
+  }
+  .background .body .mainBox .pageBody .signInForm {
+    width: 90%;
+  }
+  .background .body .auxBoxes .sideBox .form {
+    width: 100%;
+  }
+  .background .body .auxBoxes .sideBox .form .emailForm {
+    width: 100%;
   }
 }
 /*# sourceMappingURL=App.css.map */
