@@ -360,8 +360,6 @@ a:hover {
                 top: 5vh;
                 right: 0%;
                 visibility: hidden;
-                opacity: 0%;
-                transition: all 0.5s;
                 ul {
                     display: flex;
                     flex-direction: column;
@@ -374,7 +372,6 @@ a:hover {
                 }
                 &.active {
                     visibility: visible;
-                    opacity: 100%;
                 }
             }
         }
@@ -431,7 +428,7 @@ a:hover {
                     }
                     .modalBody {
                         .socialLink {
-                            margin: 0px 3px;
+                            margin: 0px 1px;
                         }
                     }
                 }

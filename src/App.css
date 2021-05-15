@@ -474,9 +474,6 @@ a:hover {
     top: 5vh;
     right: 0%;
     visibility: hidden;
-    opacity: 0%;
-    -webkit-transition: all 0.5s;
-    transition: all 0.5s;
   }
   .background .header .nav ul {
     display: -webkit-box;
@@ -495,7 +492,6 @@ a:hover {
   }
   .background .header .nav.active {
     visibility: visible;
-    opacity: 100%;
   }
   .background .body .modalOverlay .modal {
     width: 85%;
@@ -552,7 +548,7 @@ a:hover {
     font-size: 20px;
   }
   .background .body .modalOverlay .modal .modalBody .socialLink {
-    margin: 0px 3px;
+    margin: 0px 1px;
   }
 }
 
